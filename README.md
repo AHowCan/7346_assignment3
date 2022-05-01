@@ -1,6 +1,6 @@
-Austin Canter
-CS7346
-Assignment3-400
+Austin Canter <br>
+CS7346 <br>
+Assignment3-400 <br>
 
 # A very simple webserver
 All credit goes to the original author:
