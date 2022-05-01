@@ -3,7 +3,13 @@ FROM debian:9.3-slim
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 RUN apt-get update \
-    && apt-get install -y curl
+    && apt-get install -y \
+        nmap \
+        npm \
+        vim \
+        curl
+
+
 
 ENV NVM_DIR /usr/local/nvm
 ENV NODE_VERSION 8.9.4
@@ -17,6 +23,7 @@ ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
 RUN node -v
 RUN npm -v
+
 
 RUN npm install express
 
