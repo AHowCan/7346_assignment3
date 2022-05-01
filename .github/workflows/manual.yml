@@ -1,36 +1,33 @@
-# This is a basic workflow that is manually triggered
-
 name: Assignment3 Workflow
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
 on:
+  push:
+
   workflow_dispatch:
     # Inputs the workflow accepts.
 
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "greet"
-  greet:
-    # The type of runner that the job will run on
+  build-and-deploy:
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: 'actions/checkout@v3'
     - id: 'auth'
       name: 'Authenticate to Google Cloud'
       uses: 'google-github-actions/auth@v0'
       with:
-        credentials_json: '${{secrets.GCP_CREDENTIALS }}'
-
-    - name: 'Setup Cloud SDK'
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+       
+    - name: 'Set up Cloud SDK'
       uses: 'google-github-actions/setup-gcloud@v0'
-
-    - name: 'Use Cloud SDK to list service accounts'
-      run: 'gcloud iam service-accounts list'
       
+    - name: 'Submit to Cloud Build'
+      run: gcloud builds submit --tag gcr.io/cs7346-assignment3/7346_assignment3
+
+    - name: 'Deploy to Cloud Run'
+      run: gcloud run deploy assignment3-simple-webserver --image=gcr.io/cs7346-assignment3/7346_assignment3:latest --region=us-central1 --allow-unauthenticated
+
+
       
       
       
