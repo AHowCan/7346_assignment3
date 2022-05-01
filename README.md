@@ -1,3 +1,7 @@
+Austin Canter
+CS7346
+Assignment3
+
 # A very simple webserver
 
 All credit goes to the original author:
