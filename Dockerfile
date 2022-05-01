@@ -3,11 +3,7 @@ FROM debian:9.3-slim
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 RUN apt-get update \
-    && apt-get install -y \
-        nmap \
-        npm \
-        vim \
-        curl
+    && apt-get install -y curl
 
 
 
