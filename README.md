@@ -3,9 +3,7 @@
 All credit goes to the original author:
 [koind/docker-simple-webserver | Github Repo](https://github.com/koind/docker-simple-webserver)
 
-It just made sense for us to include this in our repo as standalone files as opposed to including the original repo in ours as a submodule.
-
-Instructions from readme in original repo as below.
+Furthermore this was used in SMU CS7346 class and homework assignments. 
 
 # Simple web server in docker container
 
