@@ -3,7 +3,6 @@ CS7346
 Assignment3-400
 
 # A very simple webserver
-
 All credit goes to the original author:
 [koind/docker-simple-webserver | Github Repo](https://github.com/koind/docker-simple-webserver)
 
