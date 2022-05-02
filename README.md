@@ -2,7 +2,10 @@ Austin Canter <br>
 CS7346 <br>
 Assignment3-400 <br>
 
-Yay, service accounts + Workload identity federation should be working.
+Yay, service accounts + Workload identity federation should be working. <br>
+
+I enjoyed learning the additional software development processes like CI/CD and github actions in general.
+
 
 # A very simple webserver
 All credit goes to the original author:
