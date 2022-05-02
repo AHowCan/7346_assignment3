@@ -2,6 +2,8 @@ Austin Canter <br>
 CS7346 <br>
 Assignment3-400 <br>
 
+Yay, service accounts + Workload identity federation should be working.
+
 # A very simple webserver
 All credit goes to the original author:
 [koind/docker-simple-webserver | Github Repo](https://github.com/koind/docker-simple-webserver)
